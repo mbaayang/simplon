@@ -72,10 +72,7 @@ int main()
         printf("Très bien\n\n");
 
     }else
-    {
         printf("Excellent\n\n");
-    }  
- 
  
     return 0;
 }
