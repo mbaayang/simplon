@@ -17,13 +17,9 @@ int main()
     for ( i = 0; i <2; i++)
     {
         printf("Entrez la note Math %d\n",i+1);
-        scanf("%f",&Notes_Math[i]);
-
-        while (Notes_Math[i]<0 || Notes_Math[i]>20)
-        {
-            printf("Votre note doit être compris entre 0 et 20\n");
-            printf("Entrez la note Math %d\n",i+1);
-            scanf("%f", &Notes_Math[i]);
+        if (scanf("%f",&Notes_Math[i]) == 0 || Notes_Math[i]>20 || Notes_Math[i]<0){
+            printf("La note doit être un entier compris entre 0 et 20");
+            return 0;
         }
         
         Som_Math=Som_Math+Notes_Math[i];
@@ -35,14 +31,11 @@ int main()
     for (i = 0; i < 2; i++)
     {
         printf("Entrez la note SVT %d\n",i+1);
-        scanf("%f",&Notes_SVT[i]);
-
-        while (Notes_SVT[i]<0 || Notes_SVT[i]>20)
-        {
-            printf("Votre note doit être compris entre 0 et 20\n");
-            printf("Entrez la note SVT %d\n",i+1);
-            scanf("%f", &Notes_SVT[i]);
+        if (scanf("%f",&Notes_SVT[i]) == 0 || Notes_SVT[i]>20 || Notes_SVT[i]<0){
+            printf("La note doit être un entier compris entre 0 et 20");
+            return 0;
         }
+
 
         Som_Svt=Som_Svt+Notes_SVT[i];
     }
@@ -53,13 +46,9 @@ int main()
     for ( i = 0; i < 2; i++)
     {
         printf("Entrez la note PC %d\n",i+1);
-        scanf("%f",&Notes_PC[i]);
-
-        while (Notes_PC[i]<0 || Notes_PC[i]>20)
-        {
-            printf("Votre note doit être compris entre 0 et 20\n");
-            printf("Entrez la note PC %d\n",i+1);
-            scanf("%f", &Notes_PC[i]);
+        if (scanf("%f",&Notes_PC[i]) == 0 || Notes_PC[i]>20 || Notes_PC[i]<0){
+            printf("La note doit être un entier compris entre 0 et 20");
+            return 0;
         }
 
         Som_Pc=Som_Pc+Notes_PC[i];
