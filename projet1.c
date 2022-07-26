@@ -43,8 +43,29 @@ int main()
         
         while (verif(reponse)==0)  //tant que la fonction verif(repose) est fausse demandé à saisir un nombre
         {
-            printf("Code incorrect,veillez saisir un nombre:\n ");
+            if (i<3)
+        {
+            i++;
+        }
+        else{
+            cpt++;
+            i = 0;
+            if (cpt == 3)
+            {
+                printf("Fin des tentatives\n");
+                return 0;
+            }
+            if (cpt == 2)
+            {
+                printf("Veuillez saisir un nombre, il vous reste une tentative:\n ");
+            }
+            else
+            {
+                printf("Code incorrect, veillez saisir un nombre:\n ");
+            }
             scanf("%s", reponse);
+            
+        }  
         }
         
     while (tab[i] != atoi(reponse)) //tant que tab[i] est different de la reponse convertit en nombre
